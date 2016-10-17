@@ -4,6 +4,7 @@ var Pushable = require('pull-pushable')
 var scan = require('pull-scan')
 var struct = require('observ-struct')
 var xtend = require('xtend')
+var Routes = require('routes')
 
 var rs = {
     '/': [view, controller, store]
