@@ -1,8 +1,8 @@
 var S = require('pull-stream')
 var pushable = require('pull-pushable')
 
-module.exports = function () {
-    return function rootView (params) {
+module.exports = function RootView () {
+    return function rootView () {
         var p = pushable()
         var ar = ['a', 'b', 'c']
         ar.forEach(function (ev) {
@@ -10,6 +10,4 @@ module.exports = function () {
         })
         return { source: p, sink: S.log() }
     }
-
-
 }
