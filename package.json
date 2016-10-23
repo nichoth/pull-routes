@@ -13,5 +13,25 @@
   },
   "devDependencies": {
     "route-event": "^1.0.5"
-  }
+  },
+  "name": "pull-routes",
+  "description": "From a high level our goal is to reduce complexity. What makes this complicated?",
+  "version": "0.0.0",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nichoth/pull-routes.git"
+  },
+  "author": "nichoth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nichoth/pull-routes/issues"
+  },
+  "homepage": "https://github.com/nichoth/pull-routes#readme"
 }

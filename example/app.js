@@ -1,4 +1,4 @@
-var start = require('../')()
+var router = require('../')()
 var api = require('./mock/api')()
 var rootView = require('./view/root')()
 var rootController = require('./ctrl/root')(api)
@@ -14,6 +14,6 @@ var routes = {
     }
 }
 
-var setRoute = start(routes)
+var setRoute = router(routes)
 setRoute('/')
 

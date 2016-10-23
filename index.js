@@ -1,4 +1,4 @@
-var S = require('pull-stream')
+var S = require('pull-stream/pull')
 var Router = require('routes')
 var routeEvent = require('route-event')
 
