@@ -8,6 +8,6 @@ module.exports = function RootView () {
         ar.forEach(function (ev) {
             process.nextTick(() => p.push(ev))
         })
-        return { source: p, sink: S.log() }
+        return { source: p, sink: S.log(), view: 'root view' }
     }
 }
