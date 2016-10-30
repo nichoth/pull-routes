@@ -13,7 +13,10 @@
     "xtend": "^4.0.1"
   },
   "devDependencies": {
-    "route-event": "^1.0.5"
+    "pull-abortable": "^4.1.0",
+    "route-event": "^1.0.5",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.2"
   },
   "name": "pull-routes",
   "description": "From a high level our goal is to reduce complexity. What makes this complicated?",
@@ -24,7 +27,7 @@
   },
   "scripts": {
     "postversion": "git push && git push --tags && npm publish",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/index.js | tap-spec"
   },
   "repository": {
     "type": "git",
