@@ -10,8 +10,8 @@ module.exports = function Start (routeEv) {
         var router = Router()
 
         // match url strings, subscribe to events, return a view
-        Object.keys(routes).forEach(function (path) {
-            router.addRoute(path, routes[path])
+        routes.forEach(function (r) {
+            router.addRoute(r[0], r[1])
         })
 
         // listen to route changes in browsers, return pushable that

@@ -4,14 +4,14 @@ var Router = require('../')
 
 test('map paths to routes', function (t) {
     t.plan(2)
-    var rs = {
-        '/': function () {
+    var rs = [
+        [ '/', function root () {
             return '/'
-        },
-        '/one': function () {
+        } ],
+        [ '/one', function one () {
             return '/one'
-        }
-    }
+        } ]
+    ]
 
     var router = Router()
     var routeStream = router(rs)

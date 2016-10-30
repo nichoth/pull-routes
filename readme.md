@@ -14,14 +14,14 @@ Under the hood it uses [routes](https://www.npmjs.com/package/routes). See the d
 var S = require('pull-stream')
 var Router = require('pull-routes')
 var router = Router()
-var routeStream = router({
-    '/': function () {
+var routeStream = router([
+    ['/', function () {
         return 'root path'
-    },
-    '/foo/:i': function (params) {
+    }],
+    ['/foo/:i', function (params) {
         return 'foo path ' + params.i
-    }
-})
+    }]
+])
 
 S(
     routeStream,
