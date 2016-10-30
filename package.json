@@ -1,33 +1,27 @@
 {
-  "dependencies": {
-    "observ-struct": "^6.0.0",
-    "pull-cat": "^1.1.11",
-    "pull-flat-merge": "0.0.0",
-    "pull-many": "^1.0.8",
-    "pull-paramap": "^1.2.0",
-    "pull-pushable": "^2.0.1",
-    "pull-scan": "^1.0.0",
-    "pull-stream": "^3.4.5",
-    "route-event": "^1.0.5",
-    "routes": "^2.1.0",
-    "xtend": "^4.0.1"
-  },
-  "devDependencies": {
-    "pull-abortable": "^4.1.0",
-    "route-event": "^1.0.5",
-    "tap-spec": "^4.1.1",
-    "tape": "^4.6.2"
-  },
   "name": "pull-routes",
-  "description": "From a high level our goal is to reduce complexity. What makes this complicated?",
+  "description": "Match routes with a pull stream",
   "version": "0.0.2",
   "main": "index.js",
   "directories": {
-    "example": "example"
+    "example": "example",
+    "test": "test"
   },
   "scripts": {
+    "preversion": "npm test",
     "postversion": "git push && git push --tags && npm publish",
     "test": "node test/index.js | tap-spec"
+  },
+  "dependencies": {
+    "pull-pushable": "^2.0.1",
+    "pull-stream": "^3.4.5",
+    "route-event": "^1.0.5",
+    "routes": "^2.1.0"
+  },
+  "devDependencies": {
+    "route-event": "^1.0.5",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.2"
   },
   "repository": {
     "type": "git",
@@ -38,5 +32,15 @@
   "bugs": {
     "url": "https://github.com/nichoth/pull-routes/issues"
   },
-  "homepage": "https://github.com/nichoth/pull-routes#readme"
+  "homepage": "https://github.com/nichoth/pull-routes#readme",
+  "keywords": [
+    "routes",
+    "router",
+    "browser",
+    "pull",
+    "stream",
+    "pull-stream",
+    "client",
+    "side"
+  ]
 }
